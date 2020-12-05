@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 
 #define LOW 0
 #define HIGH 1
