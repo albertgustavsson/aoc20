@@ -38,7 +38,7 @@ int main(int argc, const char **argv) {
 		perror("Couldn't open file");
 		return EXIT_FAILURE;
 	}
-	
+
 	unsigned int max_id = 0;
 	while(!feof(input_file)) {
 		const unsigned int max_line_length = 50;
@@ -48,7 +48,6 @@ int main(int argc, const char **argv) {
 		if(id > max_id) max_id = id;
 	}
 
-	
 	printf("Max seat ID: %u\n", max_id);
 
 	fclose(input_file);

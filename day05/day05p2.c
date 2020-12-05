@@ -38,7 +38,7 @@ int main(int argc, const char **argv) {
 		perror("Couldn't open file");
 		return EXIT_FAILURE;
 	}
-	
+
 	int exists[128*8] = {0};
 	while(!feof(input_file)) {
 		const unsigned int max_line_length = 50;
@@ -47,11 +47,11 @@ int main(int argc, const char **argv) {
 		unsigned int id = get_set_id(line);
 		exists[id] = 1;
 	}
-	
+
 	unsigned int i = 0;
 	while(!exists[i]) i++;
 	while(exists[i]) i++;
-	
+
 	printf("My seat ID: %u\n", i);
 
 	fclose(input_file);
